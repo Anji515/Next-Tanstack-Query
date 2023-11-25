@@ -9,7 +9,7 @@ const TanstackProvider = ({children} : {children : React.ReactNode}) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {children}
+      { children }
      <ReactQueryDevtools initialIsOpen={false}/>
     </QueryClientProvider>
   )
