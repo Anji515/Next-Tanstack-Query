@@ -1,16 +1,17 @@
 import React from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
-import type { Todo } from './Todos'
+import type { TodoData } from './Todos'
 import { Button } from './ui/button'
-// import {Card } from ''
 
 
-const TodoCard = ({title,content,status} : Todo) => {
+const TodoCard = ({
+title,status,content
+} : TodoData) => {
     
   return (
     <Card>
     <CardHeader>
-      <CardTitle className={!status ? `line-through`:''}>{title}</CardTitle>
+      <CardTitle className={status ? `line-through`:''}>{title}</CardTitle>
     </CardHeader>  
       <CardFooter>
         <div className='flex justify-between min-w-full gap-3'>
