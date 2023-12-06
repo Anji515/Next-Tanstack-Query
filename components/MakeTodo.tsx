@@ -21,7 +21,10 @@ const MakeTodo = () => {
           status: false,
         }),
         onSuccess: (data) => {
-          toast({ description: 'Added todo successfully' });
+          toast({
+            description: "Your message has been sent.",
+          })
+          console.log('success')
           setTitle('');
           setContent('')
           queryClient.invalidateQueries(['user-todos'] as InvalidateQueryFilters);
@@ -33,7 +36,7 @@ const MakeTodo = () => {
     
   return (
     <div >
-        Create Todo
+        <h1 className='text-lg text-black font-extrabold mt-8'>Create Todo</h1>
         <div className='flex justify-between gap-4'>
         <Input
         placeholder='Please enter your todo'
